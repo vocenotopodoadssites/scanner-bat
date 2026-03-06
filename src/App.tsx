@@ -72,7 +72,9 @@ const App: React.FC = () => {
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a 
-                href="#pricing"
+                href="https://pay.kiwify.com.br/nOGSM14"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full sm:w-auto px-8 py-4 bg-emerald-500 hover:bg-emerald-400 text-black font-bold rounded-xl transition-all transform hover:scale-105 flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(16,185,129,0.3)]"
               >
                 QUERO ENTRAR PARA O VIP AGORA
@@ -357,9 +359,14 @@ const App: React.FC = () => {
               </div>
             </div>
 
-            <button className="w-full py-5 bg-emerald-500 hover:bg-emerald-400 text-black font-black text-lg rounded-2xl transition-all transform hover:scale-105 shadow-[0_10px_30px_rgba(16,185,129,0.4)] mb-6">
+            <a 
+              href="https://pay.kiwify.com.br/nOGSM14"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full py-5 bg-emerald-500 hover:bg-emerald-400 text-black font-black text-lg rounded-2xl transition-all transform hover:scale-105 shadow-[0_10px_30px_rgba(16,185,129,0.4)] mb-6"
+            >
               QUERO ENTRAR PARA O VIP AGORA
-            </button>
+            </a>
 
             <div className="flex flex-col gap-3 text-sm text-zinc-400">
               <div className="flex items-center justify-center gap-2">
