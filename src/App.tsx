@@ -19,6 +19,36 @@ const App: React.FC = () => {
     <div className="min-h-screen bg-[#0a0a0a] text-white font-sans selection:bg-emerald-500/30">
       {/* Hero Section */}
       <header className="relative overflow-hidden pt-20 pb-16 px-4">
+        {/* Animated Background Profits */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-20">
+          {[...Array(15)].map((_, i) => (
+            <motion.div
+              key={i}
+              initial={{ 
+                x: Math.random() * 100 + "%", 
+                y: "110%", 
+                opacity: 0,
+                scale: 0.5 + Math.random()
+              }}
+              animate={{ 
+                y: "-10%", 
+                opacity: [0, 1, 1, 0],
+                rotate: Math.random() * 20 - 10
+              }}
+              transition={{ 
+                duration: 10 + Math.random() * 15, 
+                repeat: Infinity, 
+                delay: Math.random() * 10,
+                ease: "linear"
+              }}
+              className="absolute text-emerald-500 font-black whitespace-nowrap select-none"
+              style={{ fontSize: Math.random() * 20 + 14 + "px" }}
+            >
+              +{["R$ " + (Math.random() * 200 + 20).toFixed(2), (Math.random() * 15 + 2).toFixed(1) + "%"][Math.floor(Math.random() * 2)]}
+            </motion.div>
+          ))}
+        </div>
+
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl">
           <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-emerald-500/10 blur-[120px] rounded-full" />
           <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-blue-500/10 blur-[120px] rounded-full" />
